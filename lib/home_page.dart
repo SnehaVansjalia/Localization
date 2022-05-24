@@ -32,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: TextStyle(fontSize: 18),
               ),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(elevation: 0),
                 onPressed: () {
                   Navigator.of(context).push(CupertinoPageRoute(
                     builder: (context) => const ChooseLanguage(),

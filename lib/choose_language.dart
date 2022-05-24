@@ -23,11 +23,15 @@ class ChooseLanguage extends StatelessWidget {
           children: [
             Text(
               'title'.tr,
-              style: TextStyle(fontSize: 18),
+              style: const TextStyle(fontSize: 22),
+            ),
+            Text(
+              'greeting'.tr,
+              style: const TextStyle(fontSize: 18),
             ),
             TextButton(
               onPressed: () {
-                Get.updateLocale(Locale('hi', 'IN'));
+                Get.updateLocale(const Locale('hi', 'IN'));
               },
               child: const Text(
                 'Translate to Hindi',
@@ -36,18 +40,18 @@ class ChooseLanguage extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                Get.updateLocale(Locale('fr', 'FR'));
+                Get.updateLocale(const Locale('fr', 'FR'));
               },
-              child: Text(
+              child: const Text(
                 'Translate to French',
                 style: buttonStyle,
               ),
             ),
             TextButton(
               onPressed: () {
-                Get.updateLocale(Locale('en', 'US'));
+                Get.updateLocale(const Locale('en', 'US'));
               },
-              child: Text(
+              child: const Text(
                 'Translate to English',
                 style: buttonStyle,
               ),

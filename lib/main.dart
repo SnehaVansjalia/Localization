@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'choose_language.dart';
 import 'home_page.dart';
 import 'package:get/get.dart';
 
@@ -14,16 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      locale: Locale('en', 'US'),
-      // supportedLocales: const [
-      //   Locale('en', 'US'),
-      //   Locale('hi', 'IN'),
-      //   Locale('fr', 'FR'),
-      // ],
+      locale: const Locale('en', 'US'),
       translationsKeys: const {
-        'en_US': {'title': 'Hello'},
-        'hi_IN': {'title': 'नमस्ते'},
-        'fr_FR': {'title': 'Bonjour'}
+        'en_US': {'title': 'Hello', 'greeting': 'How are you?'},
+        'hi_IN': {'title': 'नमस्ते', 'greeting': 'क्या हाल चाल है?'},
+        'fr_FR': {'title': 'Bonjour', 'greeting': 'Comment allez-vous'}
       },
       title: 'Flutter Demo',
       theme: ThemeData(
